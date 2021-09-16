@@ -3,19 +3,75 @@ const { Player } = require('../models');
 const playerData = [
     {
         name: '',
-        // character sheet data
+        level: '',
+        health: '',
+        strength: '',
+        dexterity: '',
+        constitution: '',
+        wisdom: '',
+        intelligence: '',
+        charisma: '',
+        pp: ''
     },
     {
         name: '',
-        // character sheet data
+        level: '',
+        health: '',
+        strength: '',
+        dexterity: '',
+        constitution: '',
+        wisdom: '',
+        intelligence: '',
+        charisma: '',
+        pp: ''
     },
     {
         name: '',
-        // character sheet data
+        level: '',
+        health: '',
+        strength: '',
+        dexterity: '',
+        constitution: '',
+        wisdom: '',
+        intelligence: '',
+        charisma: '',
+        pp: ''
     },
     {
         name: '',
-        // character sheet data
+        level: '',
+        health: '',
+        strength: '',
+        dexterity: '',
+        constitution: '',
+        wisdom: '',
+        intelligence: '',
+        charisma: '',
+        pp: ''
+    },
+    {
+        name: '',
+        level: '',
+        health: '',
+        strength: '',
+        dexterity: '',
+        constitution: '',
+        wisdom: '',
+        intelligence: '',
+        charisma: '',
+        pp: ''
+    },
+    {
+        name: '',
+        level: '',
+        health: '',
+        strength: '',
+        dexterity: '',
+        constitution: '',
+        wisdom: '',
+        intelligence: '',
+        charisma: '',
+        pp: ''
     },
 ]
 
