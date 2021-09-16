@@ -1,3 +1,6 @@
+const sequelize = require('../config/connection');
+const { Player } = require('../models');
+
 const playerData = [
     {
         name: '',
@@ -16,3 +19,7 @@ const playerData = [
         // character sheet data
     },
 ]
+
+const seedPlayers = () => Player.bulkCreate(playerData, {individualHooks: true});
+
+module.exports = seedPlayers;
