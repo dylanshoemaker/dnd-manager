@@ -1,7 +1,6 @@
-const sequelize = require('../config/connection');
-const { Monster } = require('../models');
+const { Enemy } = require('../models');
 
-const monsterData = [
+const enemyData = [
     {
         name: '',
         // whatever monster data

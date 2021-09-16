@@ -1,4 +1,3 @@
-const sequelize = require('../config/connection');
 const { Party } = require('../models');
 
 const partyData = [
