@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connection.js');
 
 class Player extends Model {}
 
@@ -11,7 +11,7 @@ Player.init(
       primaryKey: true,
       autoIncrement: true
     },
-    player_name: {
+    character_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -114,13 +114,15 @@ Player.init(
         min: -5,
         max: 30
       } 
-    },
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'player'
-},
+    }
+  },
+  {
+  sequelize,
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'player'
+  }
 );
 
 

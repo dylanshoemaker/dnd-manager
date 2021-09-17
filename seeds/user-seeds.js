@@ -4,27 +4,27 @@ const userData = [
     {
         username: 'swimteampie',
         email: 'email@email.com',
-        password: 'password'
+        password: 'password123'
     },
     {
         username: '$avatage',
         email: 'email@email.com',
-        password: 'contrasena'
+        password: 'password123'
     },
     {
         username: 'wingnut33',
         email: 'email@email.com',
-        password: 'heslo'
+        password: 'password123'
     },
     {
         username: 'goldbrick85',
         email: 'email@email.com',
-        password: 'le-mot-de-passe'
+        password: 'password123'
     },
     {
         username: 'potatocake93',
         email: 'email@email.com',
-        password: "muw'lj"
+        password: 'password123'
     },
 ]
 
