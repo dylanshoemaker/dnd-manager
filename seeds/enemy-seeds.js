@@ -33,6 +33,6 @@ const enemyData = [
     }
 ]
 
-const seedEnemies = () => Enemy.bulkCreate(enemyData, {individualHooks: true});
+const seedEnemies = () => Enemy.bulkCreate(enemyData);
 
 module.exports = seedEnemies;

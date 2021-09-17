@@ -18,6 +18,6 @@ const partyData = [
     }
 ]
 
-const seedParties = () => Party.bulkCreate(partyData, {individualHooks: true});
+const seedParties = () => Party.bulkCreate(partyData);
 
 module.exports = seedParties;

@@ -14,7 +14,6 @@ Party.init(
     party_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         len: [1]
       }
