@@ -3,7 +3,9 @@
 }
 
 #header {
-    color: #ffab40;    
+    color: #ffab40; 
+    font-family: Copperplate, Papyrus, fantasy; 
+    font-size: medium;  
 }
 
 body {
