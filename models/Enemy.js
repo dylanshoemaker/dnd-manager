@@ -14,7 +14,6 @@ Enemy.init(
     enemy_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         len: [1]
       }
