@@ -2,16 +2,19 @@ const { Party } = require('../models');
 
 const partyData = [
     {
-        partyName: ''
+        partyName: 'The Nuclear Bananas'
     },
     {
-        partyName: ''
+        partyName: 'Two Men and a Truck'
     },
     {
-        partyName: ''
+        partyName: 'The Oatmeal Enthusiasts'
     },
     {
-        partyName: ''
+        partyName: 'Earthen Kindred'
+    },
+    {
+        partyName: 'Wasatch Legion'
     },
 ]
 
