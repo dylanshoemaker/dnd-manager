@@ -23,6 +23,6 @@ const enemyData = [
     },
 ]
 
-const seedMonsters = () => Monster.bulkCreate(monsterData, {individualHooks: true});
+const seedEnemies = () => Enemy.bulkCreate(enemyData, {individualHooks: true});
 
-module.exports = seedMonsters;
+module.exports = seedEnemies;
