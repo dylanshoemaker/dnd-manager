@@ -18,6 +18,20 @@ Player.init(
         len: [1, 50]
       }
     },
+    player_race: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 50]
+      }
+    },
+    player_class: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 50]
+      }
+    },
     level: {
       type: DataTypes.INTEGER,
       allowNull: false,

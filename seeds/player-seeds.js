@@ -3,6 +3,8 @@ const { Player } = require('../models');
 const playerData = [
     {
         player_name: '',
+        player_race: '',
+        player_class: '',
         level: 0,
         armor_class: 0,
         health: 0,
@@ -16,6 +18,8 @@ const playerData = [
     },
     {
         player_name: '',
+        player_race: '',
+        player_class: '',
         level: 0,
         armor_class: 0,
         health: 0,
@@ -29,6 +33,8 @@ const playerData = [
     },
     {
         player_name: '',
+        player_race: '',
+        player_class: '',
         level: 0,
         armor_class: 0,
         health: 0,
@@ -42,6 +48,8 @@ const playerData = [
     },
     {
         player_name: '',
+        player_race: '',
+        player_class: '',
         level: 0,
         armor_class: 0,
         health: 0,
@@ -55,6 +63,8 @@ const playerData = [
     },
     {
         player_name: '',
+        player_race: '',
+        player_class: '',
         level: 0,
         armor_class: 0,
         health: 0,
@@ -66,6 +76,7 @@ const playerData = [
         charisma: 0,
         pp: 0
     }
+    
    
 ]
 
