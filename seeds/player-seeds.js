@@ -4,6 +4,7 @@ const playerData = [
     {
         name: '',
         level: '',
+        armor_class: '',
         health: '',
         strength: '',
         dexterity: '',
@@ -16,6 +17,7 @@ const playerData = [
     {
         name: '',
         level: '',
+        armor_class: '',
         health: '',
         strength: '',
         dexterity: '',
@@ -28,6 +30,7 @@ const playerData = [
     {
         name: '',
         level: '',
+        armor_class: '',
         health: '',
         strength: '',
         dexterity: '',
@@ -40,6 +43,7 @@ const playerData = [
     {
         name: '',
         level: '',
+        armor_class: '',
         health: '',
         strength: '',
         dexterity: '',
@@ -52,6 +56,7 @@ const playerData = [
     {
         name: '',
         level: '',
+        armor_class: '',
         health: '',
         strength: '',
         dexterity: '',
@@ -64,6 +69,7 @@ const playerData = [
     {
         name: '',
         level: '',
+        armor_class: '',
         health: '',
         strength: '',
         dexterity: '',
