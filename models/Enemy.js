@@ -19,6 +19,23 @@ Enemy.init(
         len: [1]
       }
     },
+    enemy_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "Dragon",
+      validate: {
+        len: [1]
+      }
+    },
+    armor_class: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    health: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
     // whatever monster data
     
     

@@ -35,10 +35,6 @@ Player.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 0,
-      validate: {
-        min: -5,
-        max: 30
-      } 
     },
     strength: {
       type: DataTypes.INTEGER,
