@@ -5,7 +5,13 @@ class Enemy extends Model {}
 
 Enemy.init(
   {
-    name: {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    enemy_name: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -14,6 +20,15 @@ Enemy.init(
       }
     },
     // whatever monster data
+    
+    
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'party'
   }
 );
 

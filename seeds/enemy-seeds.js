@@ -2,23 +2,23 @@ const { Enemy } = require('../models');
 
 const enemyData = [
     {
-        name: '',
+        enemy_name: '',
         // whatever monster data
     },
     {
-        name: '',
+        enemy_name: '',
         // whatever monster data
     },
     {
-        name: '',
+        enemy_name: '',
         // whatever monster data
     },
     {
-        name: '',
+        enemy_name: '',
         // whatever monster data
     },
     {
-        name: '',
+        enemy_name: '',
         // whatever monster data
     },
 ]

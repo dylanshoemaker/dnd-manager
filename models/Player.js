@@ -11,7 +11,7 @@ Player.init(
       primaryKey: true,
       autoIncrement: true
     },
-    name: {
+    player_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

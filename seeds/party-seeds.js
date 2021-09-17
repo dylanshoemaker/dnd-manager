@@ -2,16 +2,16 @@ const { Party } = require('../models');
 
 const partyData = [
     {
-        partyName: ''
+        party_name: ''
     },
     {
-        partyName: ''
+        party_name: ''
     },
     {
-        partyName: ''
+        party_name: ''
     },
     {
-        partyName: ''
+        party_name: ''
     },
 ]
 
