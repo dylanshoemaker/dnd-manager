@@ -28,8 +28,9 @@ Player.init(
       } 
     },
     armor_class: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 0,
     },
     health: {
       type: DataTypes.INTEGER,
