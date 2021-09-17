@@ -13,6 +13,9 @@ const partyData = [
     {
         party_name: ''
     },
+    {
+        party_name: ''
+    }
 ]
 
 const seedParties = () => Party.bulkCreate(partyData, {individualHooks: true});
