@@ -2,22 +2,22 @@ const { Party } = require('../models');
 
 const partyData = [
     {
-        partyName: 'The Nuclear Bananas'
+        party_name: 'Dragon'
     },
     {
-        partyName: 'Two Men and a Truck'
+        party_name: 'HODL GME'
     },
     {
-        partyName: 'The Oatmeal Enthusiasts'
+        party_name: 'Beard of Jesse'
     },
     {
-        partyName: 'Earthen Kindred'
+        party_name: 'Gang of the Seven Protectors'
     },
     {
-        partyName: 'Wasatch Legion'
-    },
+        party_name: 'Three Blades and a Goose'
+    }
 ]
 
-const seedParties = () => Party.bulkCreate(partyData, {individualHooks: true});
+const seedParties = () => Party.bulkCreate(partyData);
 
 module.exports = seedParties;
