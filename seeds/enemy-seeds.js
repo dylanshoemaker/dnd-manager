@@ -30,6 +30,24 @@ const enemyData = [
         enemy_type: 'Dragon',
         armor_class: 0,
         health: 0
+    },
+    {
+        enemy_name: 'King Ghidorah',
+        enemy_type: 'Dragon',
+        armor_class: 0,
+        health: 0
+    },
+    {
+        enemy_name: 'Mushu',
+        enemy_type: 'Dragon',
+        armor_class: 0,
+        health: 0
+    },
+    {
+        enemy_name: 'Ancalagon the Black',
+        enemy_type: 'Dragon',
+        armor_class: 0,
+        health: 0
     }
 ]
 
