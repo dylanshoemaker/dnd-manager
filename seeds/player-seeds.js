@@ -2,137 +2,6 @@ const { Player } = require('../models');
 
 const playerData = [
     {
-<<<<<<< HEAD
-        name: '',
-        race: '',
-        level: '',
-        health: '',
-        strength: '',
-        dexterity: '',
-        constitution: '',
-        wisdom: '',
-        intelligence: '',
-        charisma: '',
-        pp: ''
-    },
-    {
-        name: '',
-        race: '',
-        level: '',
-        health: '',
-        strength: '',
-        dexterity: '',
-        constitution: '',
-        wisdom: '',
-        intelligence: '',
-        charisma: '',
-        pp: ''
-    },
-    {
-        name: '',
-        race: '',
-        level: '',
-        health: '',
-        strength: '',
-        dexterity: '',
-        constitution: '',
-        wisdom: '',
-        intelligence: '',
-        charisma: '',
-        pp: ''
-    },
-    {
-        name: '',
-        race: '',
-        level: '',
-        health: '',
-        strength: '',
-        dexterity: '',
-        constitution: '',
-        wisdom: '',
-        intelligence: '',
-        charisma: '',
-        pp: ''
-    },
-    {
-        name: '',
-        race: '',
-        level: '',
-        health: '',
-        strength: '',
-        dexterity: '',
-        constitution: '',
-        wisdom: '',
-        intelligence: '',
-        charisma: '',
-        pp: ''
-    },
-    {
-        name: '',
-        race: '',
-        level: '',
-        health: '',
-        strength: '',
-        dexterity: '',
-        constitution: '',
-        wisdom: '',
-        intelligence: '',
-        charisma: '',
-        pp: ''
-    },
-    {
-        name: '',
-        race: '',
-        level: '',
-        health: '',
-        strength: '',
-        dexterity: '',
-        constitution: '',
-        wisdom: '',
-        intelligence: '',
-        charisma: '',
-        pp: ''
-    },
-    {
-        name: '',
-        race: '',
-        level: '',
-        health: '',
-        strength: '',
-        dexterity: '',
-        constitution: '',
-        wisdom: '',
-        intelligence: '',
-        charisma: '',
-        pp: ''
-    },
-    {
-        name: '',
-        race: '',
-        level: '',
-        health: '',
-        strength: '',
-        dexterity: '',
-        constitution: '',
-        wisdom: '',
-        intelligence: '',
-        charisma: '',
-        pp: ''
-    },
-    {
-        name: '',
-        race: '',
-        level: '',
-        health: '',
-        strength: '',
-        dexterity: '',
-        constitution: '',
-        wisdom: '',
-        intelligence: '',
-        charisma: '',
-        pp: ''
-    },
-=======
         character_name: 'Dragon',
         player_race: 'Dragonborn',
         player_class: 'Paladin',
@@ -206,10 +75,67 @@ const playerData = [
         intelligence: 1,
         charisma: 1,
         pp: 1
+    },
+    {
+        character_name: 'Larry',
+        player_race: 'Human',
+        player_class: 'Ranger',
+        level: 1,
+        armor_class: 1,
+        health: 1,
+        strength: 1,
+        dexterity: 1,
+        constitution: 1,
+        wisdom: 1,
+        intelligence: 1,
+        charisma: 1,
+        pp: 1
+    },
+    {
+        character_name: 'Merlin',
+        player_race: 'Half-Elf',
+        player_class: 'Warlock',
+        level: 1,
+        armor_class: 1,
+        health: 1,
+        strength: 1,
+        dexterity: 1,
+        constitution: 1,
+        wisdom: 1,
+        intelligence: 1,
+        charisma: 1,
+        pp: 1
+    },
+    {
+        character_name: 'Chester',
+        player_race: 'Dwarf',
+        player_class: 'Monk',
+        level: 1,
+        armor_class: 1,
+        health: 1,
+        strength: 1,
+        dexterity: 1,
+        constitution: 1,
+        wisdom: 1,
+        intelligence: 1,
+        charisma: 1,
+        pp: 1
+    },
+    {
+        character_name: 'Slick',
+        player_race: 'Bard',
+        player_class: 'Rogue',
+        level: 1,
+        armor_class: 1,
+        health: 1,
+        strength: 1,
+        dexterity: 1,
+        constitution: 1,
+        wisdom: 1,
+        intelligence: 1,
+        charisma: 1,
+        pp: 1
     }
-    
-   
->>>>>>> d937060018888a1ac7c875c37d1d29f62da3f0f7
 ]
 
 const seedPlayers = () => Player.bulkCreate(playerData);
