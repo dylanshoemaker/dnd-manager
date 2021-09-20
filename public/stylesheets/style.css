@@ -8,12 +8,20 @@
     font-size: medium;  
 }
 
-body {
+#body {   
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column; 
     background: linear-gradient(black, rgb(114, 34, 34));   
 }
 
+main {
+    flex: 1 0 auto;
+}
+
 #party-carousel {
-    margin-top: 200px;    
+    margin-top: 150px; 
+    
 }
 
 #dragon-bg {   
@@ -22,7 +30,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed; 
-    image-rendering: pixelated;
+    image-rendering: pixelated;    
 }
 
 .img-thumbnail {
@@ -34,3 +42,17 @@ body {
     background: radial-gradient(circle, black, gray);
 }
   
+.img {
+   height: 250px;
+   margin-left: -170px;
+    
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
