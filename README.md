@@ -19,7 +19,8 @@
 * [Description](#description)
 * [Technoligies](#technologies)              
 * [Use](#use)
-* [screenshots](#screenshots)
-* [Contributors] (#contributors)
+* [Screenshots](#screenshots)
+* [Contributors](#contributors)
 * [Link to application](#link)
-* [Questions] (#questions)
+* [Questions](#questions)
+
