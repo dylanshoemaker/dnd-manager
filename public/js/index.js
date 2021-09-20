@@ -19,4 +19,3 @@ $('.carousel').carousel({
 // }
 
 // profileImg.addEventListener("click", showImg);
-
