@@ -136,11 +136,6 @@ const playerData = [
         charisma: 1,
         pp: 1
     }
-<<<<<<< HEAD
-    
-   
-=======
->>>>>>> feature/user-seeds
 ]
 
 const seedPlayers = () => Player.bulkCreate(playerData);
