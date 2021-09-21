@@ -76,5 +76,19 @@ footer {
 
 #form {
     background-color: black;   
-   
+    
+}
+
+.active {
+    color: #ffab40 !important;
+}
+
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #ffab40 !important;
+    box-shadow: none !important;
+}
+
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #ffab40 !important;
+    box-shadow: none !important;
 }
