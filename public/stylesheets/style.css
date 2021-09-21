@@ -1,0 +1,94 @@
+#nav {    
+    background-color: transparent;
+}
+
+#header {
+    color: #ffab40; 
+    font-family: Copperplate, Papyrus, fantasy; 
+    font-size: medium;  
+}
+
+#body {   
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column; 
+    background: linear-gradient(black, rgb(114, 34, 34));   
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+#party-carousel {
+    margin-top: 150px; 
+    
+}
+
+#dragon-bg {   
+    height: 100%;
+    background: url(../images/27692.jpg);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed; 
+    image-rendering: pixelated;    
+}
+
+.img-thumbnail {
+    height: 150px;
+    width: 150px;
+}
+
+#card-container {
+    background: radial-gradient(circle, black, gray);
+}
+  
+.img {
+   height: 250px;
+   margin-left: -170px;
+    
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
+#fire-dragon-bg {
+    height: 100%;
+    background: url(../images/124807.jpg);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;   
+     
+}
+
+#login-main {
+    margin-top: 100px;
+}
+
+#login-text {
+    color: #ffab40;   
+    font-weight: bold; 
+}
+
+#form {
+    background-color: black;   
+    
+}
+
+.active {
+    color: #ffab40 !important;
+}
+
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #ffab40 !important;
+    box-shadow: none !important;
+}
+
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #ffab40 !important;
+    box-shadow: none !important;
+}
