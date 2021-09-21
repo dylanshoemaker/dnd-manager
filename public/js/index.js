@@ -2,9 +2,23 @@ $(document).ready(function () {
     $('.carousel').carousel();
 });
 
+function signupFormHandler(event) {
+    event.preventDefault();
 
-<<<<<<< HEAD:assets/script.js
-=======
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+
+    if (email && password) {
+        const response = fetch('/users', { 
+            method: '',
+            body: JSON.stringify({
+                email,
+                password
+            }),
+            headers: { 'Content-Type': 'application/json'}
+        }) 
+
+    }
+}
 
 // profileImg.addEventListener("click", showImg);
->>>>>>> 40139f7f62200c38734d41b1cae0d53f7c5aaa87:public/js/index.js
