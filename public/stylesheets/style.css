@@ -56,3 +56,25 @@ footer {
     color: black;
 }
 
+#fire-dragon-bg {
+    height: 100%;
+    background: url(../images/124807.jpg);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;   
+     
+}
+
+#login-main {
+    margin-top: 100px;
+}
+
+#login-text {
+    color: #ffab40;   
+    font-weight: bold; 
+}
+
+#form {
+    background-color: black;   
+   
+}
