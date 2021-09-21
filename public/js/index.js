@@ -7,3 +7,4 @@ function signupFormHandler(event) {
 
 
 // profileImg.addEventListener("click", showImg);
+}
