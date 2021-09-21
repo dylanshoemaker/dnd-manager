@@ -4,6 +4,7 @@ $(document).ready(function () {
 
 function signupFormHandler(event) {
     event.preventDefault();
+}
 
 
-// profileImg.addEventListener("click", showImg);
+
