@@ -19,6 +19,12 @@ This is a website that allows Dungeon Masters to organize digital copies of all 
 One stop shop for your DM to follow any party. Within party will have access to characters and be able to edit as needed.
 
 ## ScreenShots
+![Screen Shot 2021-09-21 at 8 07 56 PM](https://user-images.githubusercontent.com/84681402/134272627-85bf112c-0386-47e4-9f6d-e6fa16cb9e13.png)
+
+![Screen Shot 2021-09-21 at 8 08 14 PM](https://user-images.githubusercontent.com/84681402/134272634-035d0637-5a4c-4ac6-8c94-5a9b529ac900.png)
+
+![Screen Shot 2021-09-21 at 8 08 51 PM](https://user-images.githubusercontent.com/84681402/134272643-12957c7d-ad72-4a0e-9a33-f91148068a83.png)
+
 
 ## Contributors
 
