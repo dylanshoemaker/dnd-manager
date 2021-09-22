@@ -5,6 +5,7 @@ router.get('/', (req, res) => {
     console.log('=======================')
     Party.findAll({
         attributes: ['party_name'],
+        // order: [['created_at', 'DESC']], 
         // include: {
         //     model: User,
         //     attributes: ['id']
@@ -38,12 +39,16 @@ router.post('/', (req, res) => {
 })
 
 router.put('/:id', (req,res) => {
-    Party.update(req.body, {
-        individualHooks: true,
-        where: {
-            id: req.params.id
+    Party.update(
+        {
+            party_name: req.body.party_name
+        }, 
+        {
+            where: {
+                id: req.params.id
+            }
         }
-    })
+    )
     .then(dbPartyData => {
         if (!dbPartyData[0]) {
             res.status(404).json({ message: 'No party found with this id ' });
