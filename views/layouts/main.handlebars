@@ -13,24 +13,13 @@
 </head>
 
 <body>
-    <header class='container'>
-        <nav id='nav'>
-            <div class="nav-wrapper">
-                <a id="header" href="#">
-                    <h3 class="center"><i class="fas fa-xs fa-dragon"></i> Dungeons & Dragons Game Manager <i
-                            class="fas fa-xs fa-swords"></i></h3>
-                </a>
-            </div>
-        </nav>
-    </header>
-    
+    {{> header/header-block}}
+
     <main>
         {{{ body }}}
     </main>
 
-    <footer>
-        © 2021 ed-sheerans-glasses
-    </footer>
+    {{> footer/footer-block}}
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
