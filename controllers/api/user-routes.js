@@ -39,6 +39,7 @@ router.post('/', (req, res) => {
     email: req.body.email,
     password: req.body.password
   })
+  //added for saving cookies
   .then(dbUserData => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
@@ -59,6 +60,7 @@ router.post('/login', (req, res) => {
       where: {
         email: req.body.email
       }
+      //added for saving cookies
     }).then(dbUserData => {
       if (!dbUserData) {
         res.status(400).json({ message: 'Invalid email address!' });
@@ -73,7 +75,6 @@ router.post('/login', (req, res) => {
       }
   
       req.session.save(() => {
-        // declare session variables
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
