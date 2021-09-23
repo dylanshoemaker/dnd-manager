@@ -2,7 +2,8 @@ const { Party } = require('../models');
 
 const partyData = [
     {
-        party_name: 'Dragon'
+        party_name: 'Dragon',
+        user_id: 1
     },
     {
         party_name: 'HODL GME'

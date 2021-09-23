@@ -8,11 +8,12 @@
     font-size: medium;  
 }
 
-#body {   
+body {   
     display: flex;
     min-height: 100vh;
     flex-direction: column; 
-    background: linear-gradient(black, rgb(114, 34, 34));   
+    background: linear-gradient(black, rgb(114, 34, 34));  
+    background-image: url("../images/124807.jpg");    
 }
 
 main {
@@ -26,7 +27,7 @@ main {
 
 #dragon-bg {   
     height: 100%;
-    background: url(../images/27692.jpg);    
+    background-image: url("../images/124807.jpg");    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed; 
@@ -58,7 +59,7 @@ footer {
 
 #fire-dragon-bg {
     height: 100%;
-    background: url(../images/124807.jpg);    
+    background: url("../images/124807.jpg");    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;   
