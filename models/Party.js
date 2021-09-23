@@ -17,14 +17,7 @@ Party.init(
       validate: {
         len: [1]
       }
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: { 
-          model: 'user',
-          key: 'id'
-      }
-  }
+    }
   },
   {
     sequelize,

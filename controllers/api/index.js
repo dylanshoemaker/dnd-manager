@@ -8,6 +8,6 @@ const enemyRoutes = require('./enemy-routes')
 router.use('/users', userRoutes);
 router.use('/party', partyRoutes);
 router.use('/player', playerRoutes);
-router.use('/enemy', enemyRoutes)
+router.use('/enemy', enemyRoutes);
 
 module.exports = router;
