@@ -1,7 +1,10 @@
+const path = require('path');
 const express = require('express');
-const routes = require('./controllers');
 const sequelize = require('./config/connection');
-var exphbs = require('express-handlebars')
+const routes = require('./controllers');
+const session = require('express-session');
+
+var exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 
 const app = express();
@@ -46,4 +49,4 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 //handlebars port, for testing
-app.listen(3000);
+// app.listen(3000);
