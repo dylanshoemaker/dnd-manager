@@ -65,11 +65,11 @@ footer {
      
 }
 
-#login-main {
+#login-main, #create-account {
     margin-top: 100px;
 }
 
-#login-text {
+#login-text, #create-text {
     color: #ffab40;   
     font-weight: bold; 
 }
