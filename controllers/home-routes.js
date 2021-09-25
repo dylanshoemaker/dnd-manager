@@ -14,4 +14,12 @@ router.get('/createaccount', (req, res) => {
     res.render('createaccount');
 });
 
+router.get('/addcharacter', (req, res) => {
+    res.render('addcharacter');
+});
+
+router.get('/addparty', (req, res) => {
+    res.render('addparty');
+});
+
 module.exports = router;
