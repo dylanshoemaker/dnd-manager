@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { Enemy } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Enemy.findAll()
       .then(dbEnemyData => res.json(dbEnemyData))
       .catch(err => {
@@ -10,7 +11,7 @@ router.get('/', (req, res) => {
       });
   });
   
-  router.post('/', (req, res) => {
+  router.post('/', withAuth,  (req, res) => {
       // expects => {Enemy_text: "This is the Enemy", user_id: 1, post_id: 2}
       Enemy.create({
           enemy_name: req.body.enemy_name,
@@ -27,7 +28,7 @@ router.get('/', (req, res) => {
         });
     });
   
-    router.put('/:id', (req,res) => {
+    router.put('/:id', withAuth,  (req,res) => {
       Enemy.update(
           {
             enemy_name: req.body.enemy_name,
@@ -54,7 +55,7 @@ router.get('/', (req, res) => {
       });
   })
   
-    router.delete('/:id', (req, res) => {
+    router.delete('/:id', withAuth,  (req, res) => {
       Enemy.destroy({
         where: {
           id: req.params.id
