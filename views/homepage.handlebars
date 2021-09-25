@@ -1,14 +1,14 @@
 <main class="container">
-    {{#each parties as |party| }}
     <div class="row center">
         <div id="party-carousel" class="col carousel ">
-            <div class="row carousel-item" href="{{party.id}}">
+            {{#each partyData}}
+            <div class="row carousel-item">
                 <div class="col s12">
-                    <img class="img" src="{{party.image}}">
-                    <span class="black"><a href="{{party.party_url}}">{{party.party_name}}</a></span>
+                    <img class="img" src="{{image}}">
+                    <span class="black"><a href="/player">{{party_name}}</a></span>
                 </div>
             </div>
+            {{/each}}
         </div>
     </div>
-    {{/each}}
 </main>
