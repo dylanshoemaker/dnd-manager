@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { Player } = require('../../models');
+const withAuth = require("../../utils/auth");
 
-router.get('/', (req, res) => {
+router.get('/', withAuth,  (req, res) => {
   Player.findAll()
     .then(dbPlayerData => res.json(dbPlayerData))
     .catch(err => {
@@ -10,7 +11,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/', withAuth,  (req, res) => {
     // expects => {Player_text: "This is the Player", user_id: 1, post_id: 2}
     Player.create({
         character_name: req.body.character_name,
@@ -36,7 +37,7 @@ router.post('/', (req, res) => {
       });
   });
 
-  router.put('/:id', (req,res) => {
+  router.put('/:id', withAuth,  (req,res) => {
     Player.update(
         {
         character_name: req.body.character_name,
@@ -72,7 +73,7 @@ router.post('/', (req, res) => {
     });
 })
 
-  router.delete('/:id', (req, res) => {
+  router.delete('/:id', withAuth,  (req, res) => {
     Player.destroy({
       where: {
         id: req.params.id
