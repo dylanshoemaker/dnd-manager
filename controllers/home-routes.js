@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { Party } = require('../models');
 
 router.get('/', (req, res) => {
-    res.render('homepage');
+    res.render('homepage', party);
 });
 
 router.get('/login', (req, res) => {
@@ -12,6 +12,14 @@ router.get('/login', (req, res) => {
 
 router.get('/createaccount', (req, res) => {
     res.render('createaccount');
+});
+
+router.get('/addcharacter', (req, res) => {
+    res.render('addcharacter');
+});
+
+router.get('/addparty', (req, res) => {
+    res.render('addparty');
 });
 
 module.exports = router;

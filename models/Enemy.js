@@ -36,6 +36,13 @@ Enemy.init(
       allowNull: false,
       defaultValue: 0,
     },
+    party_id: {
+      type: DataTypes.INTEGER,
+      reference: {
+        model: 'party',
+        key: 'id'
+      }  
+    }
   },
   {
     sequelize,
