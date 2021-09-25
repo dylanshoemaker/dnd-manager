@@ -14,7 +14,9 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 1
+
     },
     {
         character_name: 'Draco',
@@ -29,7 +31,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 2
     },
     {
         character_name: 'Leroy Jenkins',
@@ -44,7 +47,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 3
     },
     {
         character_name: 'Dwight',
@@ -59,7 +63,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 2
     },
     {
         character_name: 'Ted',
@@ -74,7 +79,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 3
     },
     {
         character_name: 'Larry',
@@ -89,7 +95,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 1
     },
     {
         character_name: 'Merlin',
@@ -104,7 +111,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 1
     },
     {
         character_name: 'Chester',
@@ -119,7 +127,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 2
     },
     {
         character_name: 'Slick',
@@ -134,7 +143,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 3
     }
 ]
 

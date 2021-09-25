@@ -18,7 +18,8 @@ router.get('/:id', (req, res) => {
     attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
-    }
+    },
+    include: [db.Party],
   })
     .then(dbUserData => {
       if (!dbUserData) {
@@ -35,14 +36,13 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   User.create({
-    username: req.body.username,
     email: req.body.email,
     password: req.body.password
   })
+  //added for saving cookies
   .then(dbUserData => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
-      req.session.username = dbUserData.username;
       req.session.loggedIn = true;
 
       res.json(dbUserData);
@@ -59,6 +59,7 @@ router.post('/login', (req, res) => {
       where: {
         email: req.body.email
       }
+      //added for saving cookies
     }).then(dbUserData => {
       if (!dbUserData) {
         res.status(400).json({ message: 'Invalid email address!' });
@@ -73,9 +74,7 @@ router.post('/login', (req, res) => {
       }
   
       req.session.save(() => {
-        // declare session variables
         req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
         req.session.loggedIn = true;
   
         res.json({ user: dbUserData, message: 'logged in!' });

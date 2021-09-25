@@ -8,11 +8,12 @@
     font-size: medium;  
 }
 
-#body {   
+#index-bg {   
     display: flex;
     min-height: 100vh;
     flex-direction: column; 
-    background: linear-gradient(black, rgb(114, 34, 34));   
+    background: linear-gradient(black, rgb(114, 34, 34));  
+     
 }
 
 main {
@@ -20,13 +21,12 @@ main {
 }
 
 #party-carousel {
-    margin-top: 150px; 
-    
+    margin-top: 150px;   
 }
 
 #dragon-bg {   
     height: 100%;
-    background: url(../images/27692.jpg);    
+    background-image: url("../images/27692.jpg");    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed; 
@@ -58,25 +58,28 @@ footer {
 
 #fire-dragon-bg {
     height: 100%;
-    background: url(../images/124807.jpg);    
+    background: url("../images/124807.jpg");    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;   
      
 }
 
-#login-main {
+#login-main, #create-account {
     margin-top: 100px;
 }
 
-#login-text {
+#login-text, #create-text {
     color: #ffab40;   
     font-weight: bold; 
 }
 
 #form {
     background-color: black;   
-    
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    display: block;
 }
 
 .active {
