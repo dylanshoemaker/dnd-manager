@@ -8,12 +8,12 @@
     font-size: medium;  
 }
 
-body {   
+#index-bg {   
     display: flex;
     min-height: 100vh;
     flex-direction: column; 
     background: linear-gradient(black, rgb(114, 34, 34));  
-    background-image: url("../images/124807.jpg");    
+     
 }
 
 main {
