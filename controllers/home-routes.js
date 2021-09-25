@@ -6,6 +6,10 @@ router.get('/', (req, res) => {
     res.render('homepage', party);
 });
 
+router.get('/player', (req, res) => {
+    res.render('player');
+});
+
 router.get('/login', (req, res) => {
     res.render('login');
 });

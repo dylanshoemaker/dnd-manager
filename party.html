@@ -8,17 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="./public/stylesheets/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
 <body id="dragon-bg">
     <header>
-        <a id="header" href="./index.html"><h1 class="text-center"><i class="fas fa-xs fa-dragon"></i> Dungeons & Dragons Game Manager <i class="fas fa-xs fa-swords"></i></h1></a>
+        <a id="header" href="./index.html">
+            <h1 class="text-center"><i class="fas fa-xs fa-dragon"></i> Dungeons & Dragons Game Manager <i
+                    class="fas fa-xs fa-swords"></i></h1>
+        </a>
     </header>
-    
+
     <main>
         <main id="card-container" class="container bg-secondary">
             <div class="row">
@@ -26,13 +32,13 @@
                     <button class="btn btn-success" type="button" data-toggle="collapse" href="#character-1"
                         aria-expanded="false" aria-controls="character-1">Valyn the Prince Thief</button>
                 </div>
-    
+
                 <div class="col-6 d-flex justify-content-end">
                     <button class="btn btn-danger" type="button" data-toggle="collapse" href="#enemy-1"
                         aria-expanded="false" aria-controls="enemy-1">Goblin</button>
                 </div>
             </div>
-           
+
             <div class="row">
                 <div class="col-8">
                     <div class="collapse multi-collapse" id="character-1">
@@ -42,7 +48,8 @@
                                     <img src="data:image/jpeg;base64,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"
                                         class="img-thumbnail bg-success" alt="...">
                                     <h5 class="card-title text-center text-white">Valyn</h5>
-                                    <p class="card-text text-center text-white">A prince of a forgotten kingdom turned thief</p>
+                                    <p class="card-text text-center text-white">A prince of a forgotten kingdom turned
+                                        thief</p>
                                 </div>
                                 <div class="col-5">
                                     <ul class="list-group list-group-flush">
@@ -51,7 +58,7 @@
                                         <li class="list-group-item list-group-item-secondary">CON:12</li>
                                         <li class="list-group-item list-group-item-secondary">INT:10</li>
                                         <li class="list-group-item list-group-item-secondary">WIS:11</li>
-                                         <li class="list-group-item list-group-item-secondary">CHA:8</li>
+                                        <li class="list-group-item list-group-item-secondary">CHA:8</li>
                                     </ul>
                                 </div>
                             </div>
@@ -78,25 +85,25 @@
                                     <h5 class="card-title text-center text-white">Goblin</h5>
                                     <p class="card-text text-center text-white">A minion full of greed and malice</p>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
-                </div>                                   
-            </div> 
-            
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-6">
                     <button class="btn btn-success" type="button" data-toggle="collapse" href="#character-2"
                         aria-expanded="false" aria-controls="character-2">Thor the Mighty</button>
                 </div>
-    
+
                 <div class="col-6 d-flex justify-content-end">
                     <button class="btn btn-danger" type="button" data-toggle="collapse" href="#enemy-2"
                         aria-expanded="false" aria-controls="enemy-2">Skeleton Warrior</button>
                 </div>
             </div>
-           
+
             <div class="row">
                 <div class="col-8">
                     <div class="collapse multi-collapse" id="character-2">
@@ -106,7 +113,8 @@
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPDY6UiD6WIF0FDLJwFS-oldNbjUNxfv6iLw&usqp=CAU"
                                         class="img-thumbnail bg-success" alt="...">
                                     <h5 class="card-title text-center text-white">Thor</h5>
-                                    <p class="card-text text-center text-white">A beast of a man, hardened by the wilderness</p>
+                                    <p class="card-text text-center text-white">A beast of a man, hardened by the
+                                        wilderness</p>
                                 </div>
                                 <div class="col-5">
                                     <ul class="list-group list-group-flush">
@@ -115,7 +123,7 @@
                                         <li class="list-group-item list-group-item-secondary">CON:14</li>
                                         <li class="list-group-item list-group-item-secondary">INT:8</li>
                                         <li class="list-group-item list-group-item-secondary">WIS:7</li>
-                                         <li class="list-group-item list-group-item-secondary">CHA:9</li>
+                                        <li class="list-group-item list-group-item-secondary">CHA:9</li>
                                     </ul>
                                 </div>
                             </div>
@@ -140,26 +148,27 @@
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0CFa0TDqgf5rr-YrupptFiXTZ6FrVB1sXyg&usqp=CAU"
                                         class="img-thumbnail bg-danger" alt="...">
                                     <h5 class="card-title text-center text-white">Skeleton Warrior</h5>
-                                    <p class="card-text text-center text-white">A minion raised from the dead by a powerful necromancer</p>
-                                </div>                            
+                                    <p class="card-text text-center text-white">A minion raised from the dead by a
+                                        powerful necromancer</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>                                   
-            </div>  
-    
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-6">
                     <button class="btn btn-success" type="button" data-toggle="collapse" href="#character-3"
                         aria-expanded="false" aria-controls="character-3">Rand Al'Thor</button>
                 </div>
-    
+
                 <div class="col-6 d-flex justify-content-end">
                     <button class="btn btn-danger" type="button" data-toggle="collapse" href="#enemy-3"
                         aria-expanded="false" aria-controls="enemy-3">Zombie</button>
                 </div>
             </div>
-           
+
             <div class="row">
                 <div class="col-8">
                     <div class="collapse multi-collapse" id="character-3">
@@ -178,7 +187,7 @@
                                         <li class="list-group-item list-group-item-secondary">CON:20</li>
                                         <li class="list-group-item list-group-item-secondary">INT:20</li>
                                         <li class="list-group-item list-group-item-secondary">WIS:20</li>
-                                         <li class="list-group-item list-group-item-secondary">CHA:20</li>
+                                        <li class="list-group-item list-group-item-secondary">CHA:20</li>
                                     </ul>
                                 </div>
                             </div>
@@ -205,12 +214,12 @@
                                     <h5 class="card-title text-center text-white">Zombie</h5>
                                     <p class="card-text text-center text-white">Ewww..</p>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
-                </div>                                   
-            </div>      
+                </div>
+            </div>
         </main>
     </main>
 
