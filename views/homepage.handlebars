@@ -1,4 +1,8 @@
 <main class="container">
+
+    <button type='submit' name='btn_create_party' class='col s12 btn btn-large waves-effect orange'>New Party</button>
+
+    {{#each parties as |party| }}
     <div class="row center">
         <div id="party-carousel" class="col carousel ">
             {{#each partyData}}
