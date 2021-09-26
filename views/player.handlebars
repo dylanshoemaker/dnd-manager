@@ -1,18 +1,12 @@
-<div class="container">
-        <button type='submit' name='btn_create_character' class='col s12 btn btn-large waves-effect orange'><a class="black-text" href="/addcharacter">New Character</a></button>
+<main id="card-container" class="container bg-secondary">
+    <div class="row">
+        {{> character-button}}
     </div>
 
-    <main id="card-container" class="container bg-secondary">
-        {{#each }}
-        <div class="row">
-            {{> character-button}}
-        </div>
-        {{/each}}
+    {{#each playerData}}
+    <div class="row">
+        {{> character}}
+    </div>
+    {{/each}}
 
-        {{#each}}
-        <div class="row">
-            {{> character}}
-        </div>
-        {{/each}}
-
-    </main>
+</main>

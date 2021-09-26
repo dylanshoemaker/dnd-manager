@@ -1,12 +1,13 @@
 <div class="col-8">
-    <div class="collapse multi-collapse" id="character-1">
+    <div class="collapse multi-collapse" id="{{character_name}}">
         <div class="card" style="width: 18rem;">
             <div class="row bg-dark">
                 <div class="col-7">
                     <img class="img-thumbnail bg-success" alt="...">
-                    <h5 class="card-title text-center text-white">Valyn</h5>
-                    <p class="card-text text-center text-white">A prince of a forgotten kingdom turned thief
-                    </p>
+                    <h5 class="card-title text-center text-white">{{character_name}}</h5>
+                    <h6 class="card-title text-center text-white">{{player_race}}</h6>
+                    <h6 class="card-title text-center text-white">{{player_class}}</h6>
+                    <h6 class="card-title text-center text-white">{{level}}</h6>
                 </div>
                 <div class="col-5">
                     <ul class="list-group list-group-flush">
@@ -18,23 +19,18 @@
     </div>
 </div>
 <div class="col-4">
-    <div class="collapse multi-collapse" id="enemy-1">
+    <div class="collapse multi-collapse" id="{{enemy_name}}">
         <div class="card" style="width: 18rem;">
             <div class="row bg-dark">
                 <div class="col-5">
                     <ul class="list-group list-group-flush text-primary">
-                        <li class="list-group-item list-group-item-secondary">STR:9</li>
-                        <li class="list-group-item list-group-item-secondary">DEX:11</li>
-                        <li class="list-group-item list-group-item-secondary">CON:8</li>
-                        <li class="list-group-item list-group-item-secondary">INT:5</li>
-                        <li class="list-group-item list-group-item-secondary">WIS:5</li>
-                        <li class="list-group-item list-group-item-secondary">CHA:5</li>
+                        {{> enemylist}}
                     </ul>
                 </div>
                 <div class="col-7">
                     <img class="img-thumbnail bg-danger" alt="...">
-                    <h5 class="card-title text-center text-white">Goblin</h5>
-                    <p class="card-text text-center text-white">A minion full of greed and malice</p>
+                    <h5 class="card-title text-center text-white">{{enemy_name}}</h5>
+                    <p class="card-text text-center text-white">{{enemy_type}}</p>
                 </div>
 
             </div>
