@@ -3,13 +3,11 @@
     </div>
 
     <main id="card-container" class="container bg-secondary">
-        {{#each }}
         <div class="row">
             {{> character-button}}
         </div>
-        {{/each}}
 
-        {{#each}}
+        {{#each playerData}}
         <div class="row">
             {{> character}}
         </div>
