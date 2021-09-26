@@ -2,13 +2,9 @@
 
 ## Description
 
-<<<<<<< HEAD
-## Technologies 
-=======
 This is a website that allows Dungeon Masters to organize digital copies of all of their character sheets in each campaign that they’re managing.  Rather than trying to keep track of hard copies, they can have all of the relevant information they need all in one place.  DMs also have the capability of editing and reorganizing the character sheets as needed.
 
 ## Technologies used
->>>>>>> 8c703d0c9ac52db853e15e51d3e4f217c20f74c9
 
 ![NodeJS](https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
@@ -47,11 +43,6 @@ https://github.com/Stormblessed624
 
 ## Link to application
 
-<<<<<<< HEAD
-## Questions
-
-### Table of contents
-=======
 Heroku - https://git.heroku.com/infinite-hollows-29910.git
 
 ## Questions
@@ -61,7 +52,6 @@ Email: xtrent777x@gmail.com
 
 
 ## Table of Contents
->>>>>>> 8c703d0c9ac52db853e15e51d3e4f217c20f74c9
 
 * [Description](#description)
 * [Technoligies](#technologies)              
@@ -70,7 +60,3 @@ Email: xtrent777x@gmail.com
 * [Contributors](#contributors)
 * [Link to application](#link)
 * [Questions](#questions)
-<<<<<<< HEAD
-
-=======
->>>>>>> 8c703d0c9ac52db853e15e51d3e4f217c20f74c9
