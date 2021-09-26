@@ -21,14 +21,31 @@
                             class="fas fa-xs fa-swords"></i></h3>
                 </a>
             </div>
+            {{#if loggedIn}}
             <div class="row">
-                {{#if loggedIn}}
                 <button type='submit' name='btn_create_party' class='col s12 btn btn-large waves-effect orange'>
                     <a class="black-text" href="/addparty">New Party</a>
                 </button>
-                <button type='submit' name='logout' class='col s12 btn btn-large waves-effect orange'>Log Out</button>
-                {{/if}}
+                <button type='submit' name='logout' class='col s12 btn btn-large waves-effect orange'>
+                    <a href="/login">Log Out</a>
+                </button>
             </div>
+            {{else}}
+            <div class="row">
+                <button type='submit' name='login' class='col s12 btn btn-large waves-effect orange'>
+                    <a href="/login">Login</a>
+                </button>
+                <button type='submit' name='login' class='col s12 btn btn-large waves-effect orange'>
+                    <a href="/createaccount">Create Account</a>
+                </button>
+            </div>
+            {{/if}}
+            {{#if playerSite}}
+            <div class="container">
+                <button type='submit' name='btn_create_character' class='col s12 btn btn-large waves-effect orange'><a
+                        class="black-text" href="/addcharacter">New Character</a></button>
+            </div>
+            {{/if}}
         </nav>
     </header>
 
@@ -37,6 +54,7 @@
     </main>
 
     {{> footer-block}}
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -50,9 +68,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-    <script src="/javascript/login.js"></script>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-    <script src="/javascript/create-user.js"
+    <script src="/javascript/create-user.js"></script>
     {{/if}}
+    <script src="/javascript/login.js"></script>
 </body>

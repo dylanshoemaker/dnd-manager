@@ -39,7 +39,7 @@ main {
     background-image: url("../images/27692.jpg");    
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: fixed; 
+    background-position: center; 
     image-rendering: pixelated;   
 }
   
@@ -54,7 +54,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    color: black;
+    color: #ffab40;
     font-weight: bold;
 }
 
@@ -64,6 +64,30 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;  
+}
+
+#createaccount-bg {
+    height: 100%;
+    background: url("../images/462587.jpg");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+}
+
+#addparty-bg {
+    height: 100%;
+    background: url("../images/3823024.jpg");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+}
+
+#addcharacter-bg {
+    height: 100%;
+    background: url("../images/1583924.jpg");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
 }
 
 #login-text, #create-text {
@@ -89,6 +113,11 @@ footer {
 }
 
 .input-field input[type=email]:focus {
+    border-bottom: 1px solid #ffab40 !important;
+    box-shadow: none !important;
+}
+
+.input-field input[type=text]:focus {
     border-bottom: 1px solid #ffab40 !important;
     box-shadow: none !important;
 }
