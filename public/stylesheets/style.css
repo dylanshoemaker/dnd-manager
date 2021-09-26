@@ -96,3 +96,8 @@ footer {
     border-bottom: 1px solid #ffab40 !important;
     box-shadow: none !important;
 }
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #ffab40 !important;
+    box-shadow: none !important;
+}
