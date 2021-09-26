@@ -3,7 +3,10 @@ const sequelize = require('../config/connection');
 const { Party } = require('../models');
 
 router.get('/', (req, res) => {
-    res.render('homepage', party);
+    res.render('homepage', {
+        party, 
+        loggedIn: req.session.loggedIn
+    })
 });
 
 router.get('/player', (req, res) => {

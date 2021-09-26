@@ -1,6 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnD Manager</title>
 
-{{{ body }}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="stylesheets/style.css">
 
-</html>
+</head>
+
+<body id="fire-dragon-bg">
+    <header class='container'>
+        <nav id='nav'>
+            <div class="nav-wrapper">
+                <a id="header" href="#">
+                    <h3 class="center"><i class="fas fa-xs fa-dragon"></i> Dungeons & Dragons Game Manager <i
+                            class="fas fa-xs fa-swords"></i></h3>
+                </a>
+            </div>
+            <div class="row">
+                {{#if loggedIn}}
+                <button type='submit' name='btn_create_party' class='col s12 btn btn-large waves-effect orange'>
+                    <a class="black-text" href="/addparty">New Party</a>
+                </button>
+                <button type='submit' name='logout' class='col s12 btn btn-large waves-effect orange'>Log Out</button>
+                {{/if}}
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {{{ body }}}
+    </main>
+
+    {{> footer-block}}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script src="/javascript/login.js"></script>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    <script src="/javascript/create-user.js"
+    {{/if}}
+</body>
