@@ -1,0 +1,123 @@
+body {
+    background: linear-gradient(black, rgb(114, 34, 34));  
+}
+
+nav {    
+    background-color: transparent;
+}
+
+#header {
+    color: #ffab40; 
+    font-family: Copperplate, Papyrus, fantasy; 
+    font-size: medium;  
+}
+
+#main-bg {   
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column; 
+    background: linear-gradient(black, rgb(114, 34, 34));       
+}
+
+
+main {
+    flex: 1 0 auto;
+}
+
+#party-carousel {
+    margin-top: 150px;   
+}
+
+.img-thumbnail {
+    height: 150px;
+    width: 150px;
+}
+
+#player-bg {
+    /* background: radial-gradient(circle, black, gray); */
+    height: 100%;
+    background-image: url("../images/27692.jpg");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    image-rendering: pixelated;   
+}
+  
+.img {
+   height: 250px;
+   margin-left: -170px;
+    
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #ffab40;
+    font-weight: bold;
+}
+
+#login-main, #create-account {    
+    height: 100%;
+    background: url("../images/124807.jpg");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;  
+}
+
+#createaccount-bg {
+    height: 100%;
+    background: url("../images/462587.jpg");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+}
+
+#addparty-bg {
+    height: 100%;
+    background: url("../images/3823024.jpg");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+}
+
+#addcharacter-bg {
+    height: 100%;
+    background: url("../images/1583924.jpg");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+}
+
+#login-text, #create-text {
+    color: #ffab40;   
+    font-weight: bold; 
+}
+
+#form {
+    background-color: black;   
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    display: block;
+}
+
+.active {
+    color: #ffab40 !important;
+}
+
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #ffab40 !important;
+    box-shadow: none !important;
+}
+
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #ffab40 !important;
+    box-shadow: none !important;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #ffab40 !important;
+    box-shadow: none !important;
+}

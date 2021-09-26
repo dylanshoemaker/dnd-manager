@@ -1,0 +1,14 @@
+<main id="player-bg">
+    <div class="container">
+        <div class="row">
+            {{> character-button}}
+        </div>
+
+        {{#each playerData}}
+        <div class="row">
+            {{> character}}
+        </div>
+        {{/each}}
+    </div>
+
+</main>

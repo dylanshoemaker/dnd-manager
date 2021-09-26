@@ -14,7 +14,9 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 1
+
     },
     {
         character_name: 'Draco',
@@ -29,7 +31,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 2
     },
     {
         character_name: 'Leroy Jenkins',
@@ -44,7 +47,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 3
     },
     {
         character_name: 'Dwight',
@@ -59,7 +63,8 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 2
     },
     {
         character_name: 'Ted',
@@ -74,10 +79,73 @@ const playerData = [
         wisdom: 1,
         intelligence: 1,
         charisma: 1,
-        pp: 1
+        pp: 1,
+        party_id: 3
+    },
+    {
+        character_name: 'Larry',
+        player_race: 'Human',
+        player_class: 'Ranger',
+        level: 1,
+        armor_class: 1,
+        health: 1,
+        strength: 1,
+        dexterity: 1,
+        constitution: 1,
+        wisdom: 1,
+        intelligence: 1,
+        charisma: 1,
+        pp: 1,
+        party_id: 1
+    },
+    {
+        character_name: 'Merlin',
+        player_race: 'Half-Elf',
+        player_class: 'Warlock',
+        level: 1,
+        armor_class: 1,
+        health: 1,
+        strength: 1,
+        dexterity: 1,
+        constitution: 1,
+        wisdom: 1,
+        intelligence: 1,
+        charisma: 1,
+        pp: 1,
+        party_id: 1
+    },
+    {
+        character_name: 'Chester',
+        player_race: 'Dwarf',
+        player_class: 'Monk',
+        level: 1,
+        armor_class: 1,
+        health: 1,
+        strength: 1,
+        dexterity: 1,
+        constitution: 1,
+        wisdom: 1,
+        intelligence: 1,
+        charisma: 1,
+        pp: 1,
+        party_id: 2
+    },
+    {
+        character_name: 'Slick',
+        player_race: 'Bard',
+        player_class: 'Rogue',
+        level: 1,
+        armor_class: 1,
+        health: 1,
+        strength: 1,
+        dexterity: 1,
+        constitution: 1,
+        wisdom: 1,
+        intelligence: 1,
+        charisma: 1,
+        pp: 1,
+        party_id: 3
     }
-    
-   
 ]
 
 const seedPlayers = () => Player.bulkCreate(playerData);

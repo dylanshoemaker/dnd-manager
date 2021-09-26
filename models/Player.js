@@ -114,6 +114,13 @@ Player.init(
         min: -5,
         max: 30
       } 
+    },
+    party_id: {
+      type: DataTypes.INTEGER,
+      reference: {
+        model: 'party',
+        key: 'id'
+      }  
     }
   },
   {
