@@ -28,6 +28,14 @@ main {
     flex: 1 0 auto;
 }
 
+.carousel .carousel-item {
+    visibility: visible;
+}
+
+.carousel-item {
+    display: flex;
+}
+
 #party-carousel {
     margin-top: 150px;   
 }

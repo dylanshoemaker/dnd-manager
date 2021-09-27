@@ -1,17 +1,14 @@
 <main class="container">
-    <h2>Testing</h2>
-    {{#each partyData}}
-    <p>party: {{party_name}}</p>
-    {{/each}}
     <div class="row center">
-        <div id="party-carousel" class="col carousel ">
+        <div id="party-carousel" class="col carousel">            
             {{#each partyData}}
-            <div class="row carousel-item">
+            <div class="column carousel-item">
                 <div class="col s12">
-                    <img class="img" src="image">
+                    <img class="img" src="/images/DnD.jpg">
                     <span class="black"><a href="/player">{{party_name}}</a></span>
                 </div>
             </div>
+
             {{/each}}
         </div>
     </div>
