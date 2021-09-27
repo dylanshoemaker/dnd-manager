@@ -19,11 +19,11 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-router.get("/:id", withAuth, (req, res) => {
+router.get("/:user_id", withAuth, (req, res) => {
   console.log("=====================");
   Party.findOne({
     where: {
-      id: req.params.id,
+      user_id: req.session.user_id,
     },
   });
 });

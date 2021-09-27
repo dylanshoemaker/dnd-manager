@@ -34,4 +34,6 @@ Enemy.belongsTo(Party, {
 
 
 
+
+
 module.exports = { User, Party, Player, Enemy };

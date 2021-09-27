@@ -3,13 +3,18 @@ const { Player } = require('../../models');
 const withAuth = require("../../utils/auth");
 
 router.get('/', withAuth,  (req, res) => {
-  Player.findAll()
+  Player.findAll({
+    where: {
+      party_id: req.session.party_id
+    }
+  })
     .then(dbPlayerData => res.json(dbPlayerData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
 });
+
 
 router.post('/', withAuth,  (req, res) => {
     // expects => {Player_text: "This is the Player", user_id: 1, post_id: 2}

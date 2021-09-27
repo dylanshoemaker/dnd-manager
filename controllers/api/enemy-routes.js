@@ -3,7 +3,11 @@ const { Enemy } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
-    Enemy.findAll()
+    Enemy.findAll({
+      where: {
+        party_id: req.session.party_id
+      }
+    })
       .then(dbEnemyData => res.json(dbEnemyData))
       .catch(err => {
         console.log(err);

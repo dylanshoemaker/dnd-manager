@@ -3,9 +3,21 @@ const sequelize = require('../config/connection');
 const { Party } = require('../models');
 
 router.get('/', (req, res) => {
-    res.render('homepage', party);
+    Party.findAll({
+        
+    })
+        .then((dbPartyData) => {
+            const partyData = dbPartyData.map(party => party.get({
+                plain: true
+            }))
+            console.log("partyData");
+            console.log(partyData);
+            res.render('homepage', {
+                partyData,
+                loggedIn: req.session.loggedIn
+            })
+        });
 });
-
 router.get('/player', (req, res) => {
     res.render('player');
 });
@@ -24,6 +36,16 @@ router.get('/addcharacter', (req, res) => {
 
 router.get('/addparty', (req, res) => {
     res.render('addparty');
+});
+
+
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('login');
 });
 
 module.exports = router;
