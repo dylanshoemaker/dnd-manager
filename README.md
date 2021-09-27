@@ -43,7 +43,7 @@ https://github.com/Stormblessed624
 
 ## Link to application
 
-Heroku - https://git.heroku.com/infinite-hollows-29910.git
+Heroku - https://dnd-character-sheet-manager.herokuapp.com/
 
 ## Questions
 
