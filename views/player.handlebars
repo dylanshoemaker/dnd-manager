@@ -1,12 +1,16 @@
-<main id="card-container" class="container bg-secondary">
-    <div class="row">
-        {{> character-button}}
-    </div>
+<main id="player-bg">
+    <div class="container">
+        {{#each playerData}}
+        <div class="row">
+            {{> character-button}}
+        </div>
+        {{/each}}
 
-    {{#each playerData}}
-    <div class="row">
-        {{> character}}
+        {{#each playerData}}
+        <div class="row">
+            {{> character}}
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
 
 </main>

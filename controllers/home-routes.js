@@ -4,7 +4,7 @@ const { Party } = require('../models');
 
 router.get('/', (req, res) => {
     res.render('homepage', {
-        login, 
+        users, 
         loggedIn: req.session.loggedIn
     })
 });

@@ -12,7 +12,7 @@
 
 </head>
 
-<body id="fire-dragon-bg">
+<body>
     <header class='container'>
         <nav id='nav'>
             <div class="nav-wrapper">
@@ -24,26 +24,26 @@
             {{#if loggedIn}}
             <div class="row">
                 <button type='submit' name='btn_create_party' class='col s12 btn btn-large waves-effect orange'>
-                    <a class="black-text" href="/addparty">New Party</a>
+                    <a class="black-text" href="/addparty"><i class="fas fa-users"></i> New Party</a>
                 </button>
                 <button type='submit' name='logout' class='col s12 btn btn-large waves-effect orange'>
-                    <a href="/login">Log Out</a>
+                    <a href="/login"><i class="fas fa-sign-out-alt"></i> Log Out</a>
                 </button>
             </div>
             {{else}}
             <div class="row">
                 <button type='submit' name='login' class='col s12 btn btn-large waves-effect orange'>
-                    <a href="/login">Login</a>
+                    <a href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
                 </button>
                 <button type='submit' name='login' class='col s12 btn btn-large waves-effect orange'>
-                    <a href="/createaccount">Create Account</a>
+                    <a href="/createaccount"><i class="fas fa-dungeon"></i> Create Account</a>
                 </button>
             </div>
             {{/if}}
-            {{#if playerSite}}
+            {{#if party}}
             <div class="container">
-                <button type='submit' name='btn_create_character' class='col s12 btn btn-large waves-effect orange'><a
-                        class="black-text" href="/addcharacter">New Character</a></button>
+                <button type='submit' name='btn_create_character' class='col s12 btn btn-large waves-effect orange'>
+                    <a class="black-text" href="/addcharacter"><i class="fas fa-user-plus"></i> New Character</a></button>
             </div>
             {{/if}}
         </nav>
