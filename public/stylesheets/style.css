@@ -2,8 +2,12 @@ body {
     background: linear-gradient(black, rgb(114, 34, 34));  
 }
 
-nav {    
+nav {   
     background-color: transparent;
+}
+
+.nav-wrapper {
+    display: flex;   
 }
 
 #header {
@@ -74,7 +78,7 @@ footer {
     background-position: center;  
 }
 
-#addparty-bg {
+#addparty-bg {    
     height: 100%;
     background: url("../images/3823024.jpg");    
     background-repeat: no-repeat;
@@ -97,10 +101,11 @@ footer {
 
 #form {
     background-color: black;   
+    margin-top: 300px;    
     margin-left: auto;
     margin-right: auto;
     width: 30%;
-    display: block;
+    display: flex;
 }
 
 .active {
