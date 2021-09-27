@@ -1,8 +1,10 @@
 <main id="player-bg">
     <div class="container">
+        {{#each playerData}}
         <div class="row">
             {{> character-button}}
         </div>
+        {{/each}}
 
         {{#each playerData}}
         <div class="row">

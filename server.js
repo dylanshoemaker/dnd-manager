@@ -37,11 +37,6 @@ app.use(express.static('views/images'));
 
 const routes = require('./controllers');
 
-//handlebars GET
-app.get('/', (req, res) => {
-  res.render('homepage');
-})
-
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
