@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Party } = require('../models');
+const { Player } = require('../models');
+const { Enemy } = require('../models');
 
 router.get('/', (req, res) => {
     Party.findAll({
@@ -19,7 +21,35 @@ router.get('/', (req, res) => {
         });
 });
 router.get('/player', (req, res) => {
-    res.render('player');
+    Player.findAll({
+        
+    })
+        .then((dbPlayerData) => {
+            const playerData = dbPlayerData.map(player => player.get({
+                plain: true
+            }))
+            console.log("playerData");
+            console.log(playerData);
+            res.render('player', {
+                playerData,
+                loggedIn: req.session.loggedIn
+            })
+    });
+
+    Enemy.findAll({
+        
+        })
+            .then((dbEnemyData) => {
+                const enemyData = dbEnemyData.map(enemy => enemy.get({
+                    plain: true
+                }))
+                console.log("enemyData");
+                console.log(enemyData);
+                res.render('player', {
+                    enemyData,
+                    loggedIn: req.session.loggedIn
+                })
+    });
 });
 
 router.get('/login', (req, res) => {

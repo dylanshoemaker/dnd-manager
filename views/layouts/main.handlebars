@@ -34,10 +34,6 @@
                 <button type='submit' name='login' class='col s12 btn btn-large waves-effect orange'>
                     <a href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
                 </button>
-                <a id="header" href="#">
-                    <h3 class="center mx-4"><i class="fas fa-xs fa-dragon"></i> Dungeons & Dragons Game Manager <i
-                            class="fas fa-xs fa-swords"></i></h3>
-                </a>
                 <button type='submit' name='login' class='col s12 btn btn-large waves-effect orange'>
                     <a href="/createaccount"><i class="fas fa-dungeon"></i> Create Account</a>
                 </button>
@@ -45,12 +41,8 @@
                 {{/if}}
             </div>
 
-            {{#if playerSite}}
+            {{#if loggedIn}}
             <div class="container">
-                <a id="header" href="#">
-                    <h3 class="center mx-4"><i class="fas fa-xs fa-dragon"></i> Dungeons & Dragons Game Manager <i
-                            class="fas fa-xs fa-swords"></i></h3>
-                </a>
                 <button type='submit' name='btn_create_character' class='col s12 btn btn-large waves-effect orange'>
                     <a class="black-text" href="/addcharacter"><i class="fas fa-user-plus"></i> New
                         Character</a></button>
