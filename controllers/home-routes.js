@@ -2,20 +2,26 @@ const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { Party, Player, Enemy, User  } = require("../models");
 
-router.get("user/:id", (req, res) => {
+
+router.get("/party", (req, res) => {
   User.findAll({
     where: {
-      id: req.session.id
+      id: req.session.user_id
     },
-    include: [Party]
-  }).then((dbPartyData) => {
-    const partyData = dbPartyData.map((party) =>
-      party.get({
+    include: [{
+      model: Party,
+      attributes: ['id', 'party_name']
+    }]
+  })
+    .then((dbUserData) => {
+      const dbPartyData = dbUserData[0].parties.map((user) =>
+      user.get({
         plain: true,
       })
-    );
+    )
+    console.log(dbPartyData)
     res.render("homepage", {
-      partyData,
+      dbPartyData: dbPartyData,
       loggedIn: req.session.loggedIn,
     });
   })
@@ -71,19 +77,19 @@ router.get("user/:id", (req, res) => {
 //   });
 // });
 
-router.get("/party", (req, res) => {
-  Party.findAll({}).then((dbPartyData) => {
-    const partyData = dbPartyData.map((party) =>
-      party.get({
-        plain: true,
-      })
-    );
-    res.render("homepage", {
-      partyData,
-      loggedIn: req.session.loggedIn,
-    });
-  });
-});
+// router.get("/party", (req, res) => {
+//   Party.findAll({}).then((dbPartyData) => {
+//     const partyData = dbPartyData.map((party) =>
+//       party.get({
+//         plain: true,
+//       })
+//     );
+//     res.render("homepage", {
+//       partyData,
+//       loggedIn: req.session.loggedIn,
+//     });
+//   });
+// });
 
 router.get("/player", (req, res) => {
   Player.findAll({}).then((dbPlayerData) => {
