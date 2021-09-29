@@ -31,8 +31,8 @@ Enemy.belongsTo(Party, {
 });
 
 
-// Player.hasMany(Enemy);
-// Enemy.belongsTo(Player);
+Player.hasMany(Enemy);
+Enemy.belongsTo(Player);
 
 
 

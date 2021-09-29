@@ -1,27 +1,35 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
-const { Party } = require("../models");
-const { Player } = require("../models");
-const { Enemy } = require("../models");
+const { Party, Player, Enemy, User  } = require("../models");
 
-// router.get("user/:id", (req, res) => {
-//   User.findAll({
-//     where: {
-//       id: req.session.id
-//     },
-//     include: [Party]
-//   }).then((dbPartyData) => {
-//     const partyData = dbPartyData.map((party) =>
-//       party.get({
-//         plain: true,
-//       })
-//     );
-//     res.render("homepage", {
-//       partyData,
-//       loggedIn: req.session.loggedIn,
-//     });
-//   });
-// });
+
+router.get("/party", (req, res) => {
+  User.findAll({
+    where: {
+      id: req.session.user_id
+    },
+    include: [{
+      model: Party,
+      attributes: ['id', 'party_name']
+    }]
+  })
+    .then((dbUserData) => {
+      const dbPartyData = dbUserData[0].parties.map((user) =>
+      user.get({
+        plain: true,
+      })
+    )
+    console.log(dbPartyData)
+    res.render("homepage", {
+      dbPartyData: dbPartyData,
+      loggedIn: req.session.loggedIn,
+    });
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
 
 // router.get("/player", (req, res) => {
 //   Player.findAll({
@@ -69,19 +77,20 @@ const { Enemy } = require("../models");
 //   });
 // });
 
-router.get("/", (req, res) => {
-  Party.findAll({}).then((dbPartyData) => {
-    const partyData = dbPartyData.map((party) =>
-      party.get({
-        plain: true,
-      })
-    );
-    res.render("homepage", {
-      partyData,
-      loggedIn: req.session.loggedIn,
-    });
-  });
-});
+// router.get("/party", (req, res) => {
+//   Party.findAll({}).then((dbPartyData) => {
+//     const partyData = dbPartyData.map((party) =>
+//       party.get({
+//         plain: true,
+//       })
+//     );
+//     res.render("homepage", {
+//       partyData,
+//       loggedIn: req.session.loggedIn,
+//     });
+//   });
+// });
+
 router.get("/player", (req, res) => {
   Player.findAll({}).then((dbPlayerData) => {
     const playerData = dbPlayerData.map((player) =>
@@ -125,21 +134,18 @@ router.get("/addparty", (req, res) => {
   res.render("addparty");
 });
 
-router.get("/login", (req, res) => {
+router.get("/", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/party");
     return;
-  }
-
-  res.render("login");
+  } res.render("login");
 });
+
 router.get("/createaccount", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
     return;
-  }
-
-  res.render("createaccount");
+  } res.render("createaccount");
 });
 
 module.exports = router;
