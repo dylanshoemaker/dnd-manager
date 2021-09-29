@@ -13,6 +13,19 @@ router.get('/', (req, res) => {
     });
 });
 
+// router.get('/:id', (req, res) => {
+//   User.findAll({
+//     where: {
+//       id: req.params.id
+//     },
+//     include: [Party]})
+//     .then(dbUserData => res.json(dbUserData))
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
+
 router.get('/:id', (req, res) => {
   User.findOne({
     attributes: { exclude: ['password'] },
