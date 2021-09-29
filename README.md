@@ -54,7 +54,7 @@ Email: xtrent777x@gmail.com
 ## Table of Contents
 
 * [Description](#description)
-* [Technoligies](#technologies)              
+* [Technologies](#technologies)              
 * [Use](#use)
 * [Screenshots](#screenshots)
 * [Contributors](#contributors)
