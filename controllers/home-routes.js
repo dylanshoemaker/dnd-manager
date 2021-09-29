@@ -17,6 +17,7 @@ router.get("/", (req, res) => {
     });
   });
 });
+
 router.get("/player", (req, res) => {
   Player.findAll({}).then((dbPlayerData) => {
     const playerData = dbPlayerData.map((player) =>
