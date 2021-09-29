@@ -1,16 +1,29 @@
 <main id="player-bg">
     <div class="container">
-        {{#each playerData}}
+        {{!-- {{#each playerData}}
         <div class="row">
             {{> character-button}}
         </div>
-        {{/each}}
+        {{/each}} --}}
 
-        {{#each playerData}}
+        {{#each enemyData}}
         <div class="row">
-            {{> character}}
+            {{> enemy-button}}
         </div>
         {{/each}}
+
+        {{!-- {{#each playerData}}
+        <div class="row">
+            {{> playerinfo}}
+        </div>
+        {{/each}} --}}
+
+        {{#each enemyData}}
+        <div class="row">
+            {{> enemyinfo}}
+        </div>
+        {{/each}}
+
     </div>
 
 </main>
