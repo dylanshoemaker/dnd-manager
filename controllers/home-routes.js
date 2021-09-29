@@ -128,17 +128,14 @@ router.get("/", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/party");
     return;
-  }
-
-  res.render("login");
+  } res.render("login");
 });
+
 router.get("/createaccount", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
     return;
-  }
-
-  res.render("createaccount");
+  } res.render("createaccount");
 });
 
 module.exports = router;
