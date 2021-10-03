@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Player } = require('../../models');
+const { Player, Party } = require('../../models');
 const withAuth = require("../../utils/auth");
 
 router.get('/', withAuth,  (req, res) => {
@@ -97,4 +97,32 @@ router.post('/', withAuth,  (req, res) => {
       });
   });
   
+  router.get("/player", (req, res) => {
+    Party.findAll({
+      where: {
+        user_id: req.session.user_id
+      },
+      include: [{
+        model: Player,
+      }]
+    })
+      .then((dbPlayerData) => {
+        const dbplayerStatArr = dbPlayerData[0].parties.map((user) =>
+        user.get({
+          plain: true,
+        })
+      )
+      console.log(dbplayerStatArr)
+      res.render("player", {
+        playerData: dbplayerStatArr,
+        loggedIn: req.session.loggedIn,
+        playerPage: req.session.playerPage,
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  });
+
   module.exports = router;

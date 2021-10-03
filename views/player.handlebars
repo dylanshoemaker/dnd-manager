@@ -1,29 +1,41 @@
-<main id="player-bg">
-    <div class="container">
-        {{!-- {{#each playerData}}
-        <div class="row">
-            {{> character-button}}
-        </div>
-        {{/each}} --}}
-
-        {{#each enemyData}}
-        <div class="row">
-            {{> enemy-button}}
-        </div>
+<main class="container" id="main-bg">
+  <div class="row center">
+    <div>
+      <ul class="collapsible">
+        {{#each dbPlayerData}}
+        <li>
+          <div class="collapsible-header"><i class="material-icons"></i>{{character_name}}</div>
+          <div class="collapsible-body">
+            <div class="divider"></div>
+            <div class="row section">
+              <div class="col s4"><h3>Race:</h3><p>{{player_race}}</p></div>
+              <div class="col s4"><h3>Class:</h3><p>{{player_class}}</p></div>
+              <div class="col s4"><h3>Level:</h3><p>{{level}}</p></div>
+            </div>
+            <div class="divider"></div>
+            <div class="row section">
+              <div class="col s6"><h3>Armor Class:</h3><p>{{armor_class}}</p></div>
+              <div class="col s6"><h3>Health:</h3><p>{{health}}</p></div>
+            </div>
+            <div class="divider"></div>
+            <div class="row section">
+              <div class="col s4"><h3>Strength:</h3><p>{{strength}}</p></div>
+              <div class="col s4"><h3>Dexterity:</h3><p>{{dexterity}}</p></div>
+              <div class="col s4"><h3>Constitution:</h3><p>{{constitution}}</p></div>
+            </div>
+            <div class="row section">
+              <div class="col s4"><h3>Wisdom:</h3><p>{{wisdom}}</p></div>
+              <div class="col s4"><h3>Intelligence:</h3><p>{{intelligence}}</p></div>
+              <div class="col s4"><h3>Charisma:</h3><p>{{charisma}}</p></div>
+            </div>
+            <div class="row section">
+              <div class="col s12"><h3>Passive Perception:</h3><p>{{pp}}</p></div>
+            </div>
+          </div>
+        </li>
         {{/each}}
-
-        {{!-- {{#each playerData}}
-        <div class="row">
-            {{> playerinfo}}
-        </div>
-        {{/each}} --}}
-
-        {{#each enemyData}}
-        <div class="row">
-            {{> enemyinfo}}
-        </div>
-        {{/each}}
-
+      </ul>
     </div>
+  </div>
 
 </main>
