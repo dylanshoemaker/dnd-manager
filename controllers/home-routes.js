@@ -19,7 +19,7 @@ router.get("/party", (req, res) => {
         plain: true,
       })
     )
-    console.log(dbPartyData)
+    // console.log(dbPartyData)
     res.render("homepage", {
       dbPartyData: dbPartyData,
       loggedIn: req.session.loggedIn,
@@ -47,7 +47,7 @@ router.get("/party/:party_name", (req, res) => {
       })
     )
     
-    console.log(dbPlayerData);
+    // console.log(dbPlayerData);
     // res.json(dbPlayerData);
     res.render("player", {
       dbPlayerData: dbPlayerData,
@@ -60,20 +60,33 @@ router.get("/party/:party_name", (req, res) => {
   });
 });
 
-// router.get("/player", (req, res) => {
-//   Enemy.findAll({}).then((dbEnemyData) => {
-//     const enemyData = dbEnemyData.map((enemy) =>
-//       enemy.get({
-//         plain: true,
-//       })
-//     );
-
-//     res.render("player", {
-//       enemyData,
-//       loggedIn: req.session.loggedIn,
-//       playerPage: req.session.playerPage,
+// router.get("/party/:party_name", (req, res) => {
+//     Enemy.findOne({
+//       where: {
+//         party_name: req.params.party_name,
+//       },
+//       include: [{
+//         model: Enemy
+//       }],
+//     })
+//     .then((dbEnemyData) => {
+//       const enemyData = dbEnemyData.enemy.map((enemy) =>
+//         enemy.get({
+//           plain: true,
+//         })
+//       )
+      
+//       console.log(enemyData);
+//       // res.json(dbPlayerData);
+//       res.render("enemy", {
+//         enemyData: enemyData,
+//         loggedIn: req.session.loggedIn,
+//       });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
 //     });
-//   });
 // });
 
 
