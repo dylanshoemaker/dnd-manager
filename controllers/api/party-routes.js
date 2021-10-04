@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Party, User } = require("../../models");
+const { Party, User, Player, Enemy } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.get("/", withAuth, (req, res) => {
@@ -19,12 +19,34 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-router.get("/:user_id", withAuth, (req, res) => {
+router.get("/:party_name", withAuth, (req, res) => {
   console.log("=====================");
   Party.findOne({
     where: {
-      user_id: req.session.user_id,
+      party_name: req.params.party_name,
     },
+    include: [{
+      model: Player
+    }],
+  })
+  .then((dbPartyData) => {
+    console.log(dbPartyData.players)
+    const dbPlayerData = dbPartyData.players.map((players) =>
+      players.get({
+        plain: true,
+      })
+    )
+    
+    console.log(dbPlayerData);
+    res.json(dbPlayerData);
+    // res.render("player", {
+    //   dbPlayerData: dbPlayerData,
+    //   loggedIn: req.session.loggedIn,
+    // });
+  })
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 

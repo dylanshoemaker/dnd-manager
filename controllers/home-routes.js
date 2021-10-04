@@ -19,7 +19,7 @@ router.get("/party", (req, res) => {
         plain: true,
       })
     )
-    console.log(dbPartyData)
+    // console.log(dbPartyData)
     res.render("homepage", {
       dbPartyData: dbPartyData,
       loggedIn: req.session.loggedIn,
@@ -31,96 +31,65 @@ router.get("/party", (req, res) => {
   });
 });
 
-// router.get("/player", (req, res) => {
-//   Player.findAll({
-//     include: [{
-//       model: Enemy,
-//       attributes: ['enemy_name', 'enemy_type', 'armor_class', 'health']
-//     }]
-//   }).then((dbPlayerData, dbEnemyData) => {
-//     const playerData = dbPlayerData.map((player) =>
-//       player.get({
-//         plain: true,
-//       })
-//     );
-//     // const enemyData = dbEnemyData.map((enemy) =>
-//     //   enemy.get({
-//     //     plain: true,
-//     //   })
-//     // );
-//     res.render("player", {
-//       playerData,
-//       loggedIn: req.session.loggedIn,
-//       playerPage: req.session.playerPage,
-//     });
-//     // res.render("player", {
-//     //   enemyData,
-//     //   loggedIn: req.session.loggedIn,
-//     //   playerPage: req.session.playerPage,
-//     // });
-//   });
-// });
-
-// router.get("/player", (req, res) => {
-//   Enemy.findAll({}).then((dbEnemyData) => {
-//     const enemyData = dbEnemyData.map((enemy) =>
-//       enemy.get({
-//         plain: true,
-//       })
-//     );
-
-//     res.render("player", {
-//       enemyData,
-//       loggedIn: req.session.loggedIn,
-//       playerPage: req.session.playerPage,
-//     });
-//   });
-// });
-
-// router.get("/party", (req, res) => {
-//   Party.findAll({}).then((dbPartyData) => {
-//     const partyData = dbPartyData.map((party) =>
-//       party.get({
-//         plain: true,
-//       })
-//     );
-//     res.render("homepage", {
-//       partyData,
-//       loggedIn: req.session.loggedIn,
-//     });
-//   });
-// });
-
-router.get("/player", (req, res) => {
-  Player.findAll({}).then((dbPlayerData) => {
-    const playerData = dbPlayerData.map((player) =>
-      player.get({
+router.get("/party/:party_name", (req, res) => {
+  Party.findOne({
+    where: {
+      party_name: req.params.party_name,
+    },
+    include: [{
+      model: Player
+    }],
+  })
+  .then((dbPartyData) => {
+    const dbPlayerData = dbPartyData.players.map((players) =>
+      players.get({
         plain: true,
       })
-    );
+    )
+    
+    // console.log(dbPlayerData);
+    // res.json(dbPlayerData);
     res.render("player", {
-      playerData,
+      dbPlayerData: dbPlayerData,
       loggedIn: req.session.loggedIn,
-      playerPage: req.session.playerPage,
     });
+  })
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 
-router.get("/player", (req, res) => {
-  Enemy.findAll({}).then((dbEnemyData) => {
-    const enemyData = dbEnemyData.map((enemy) =>
-      enemy.get({
-        plain: true,
-      })
-    );
+// router.get("/party/:party_name", (req, res) => {
+//     Enemy.findOne({
+//       where: {
+//         party_name: req.params.party_name,
+//       },
+//       include: [{
+//         model: Enemy
+//       }],
+//     })
+//     .then((dbEnemyData) => {
+//       const enemyData = dbEnemyData.enemy.map((enemy) =>
+//         enemy.get({
+//           plain: true,
+//         })
+//       )
+      
+//       console.log(enemyData);
+//       // res.json(dbPlayerData);
+//       res.render("enemy", {
+//         enemyData: enemyData,
+//         loggedIn: req.session.loggedIn,
+//       });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
-    res.render("player", {
-      enemyData,
-      loggedIn: req.session.loggedIn,
-      playerPage: req.session.playerPage,
-    });
-  });
-});
+
 
 router.get("/createaccount", (req, res) => {
   res.render("createaccount");
@@ -138,7 +107,8 @@ router.get("/", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/party");
     return;
-  } res.render("login");
+  }
+  res.render("login");
 });
 
 router.get("/createaccount", (req, res) => {

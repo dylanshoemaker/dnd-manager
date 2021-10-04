@@ -1,28 +1,25 @@
 <main id="player-bg">
+    <div class="nav-wrapper">
+        <button type='submit' name='btn_create_party' class='col s12 btn btn-large waves-effect orange mx-2'>
+            <a class="black-text" href="/addcharacter"><i class="fas fa-users"></i> New Character</a>
+        </button>
+        <button type='submit' name='btn_create_party' class='col s12 btn btn-large waves-effect orange mx-2'>
+            <a class="black-text" href="/enemy"><i class="fas fa-users"></i>Enemies</a>
+        </button>
+    </div>
+    <br></br>
     <div class="container">
-        {{#each playerData}}
+        {{#each dbPlayerData}}
         <div class="row">
             {{> character-button}}
         </div>
         {{/each}}
 
-        {{!-- {{#each enemyData}}
-        <div class="row">
-            {{> enemy-button}}
-        </div>
-        {{/each}} --}}
-
-        {{#each playerData}}
+        {{#each dbPlayerData}}
         <div class="row">
             {{> playerinfo}}
         </div>
         {{/each}}
-
-        {{!-- {{#each enemyData}}
-        <div class="row">
-            {{> enemyinfo}}
-        </div>
-        {{/each}} --}}
 
     </div>
 
