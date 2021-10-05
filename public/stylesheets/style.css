@@ -23,6 +23,9 @@ nav {
     background: linear-gradient(black, rgb(114, 34, 34));       
 }
 
+a {
+    color: white;
+}
 
 main {
     flex: 1 0 auto;
