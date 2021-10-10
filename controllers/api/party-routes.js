@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const { Party, User, Player, Enemy } = require("../../models");
-const withAuth = require("../../utils/auth");
+//const withAuth = require("../../utils/auth");
 
-router.get("/", withAuth, (req, res) => {
+router.get("/",  (req, res) => {
   console.log("=======================");
   Party.findAll({
     attributes: ["party_name"],
@@ -19,7 +19,7 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-router.get("/:party_name", withAuth, (req, res) => {
+router.get("/:party_name",  (req, res) => {
   console.log("=====================");
   Party.findOne({
     where: {
@@ -50,7 +50,7 @@ router.get("/:party_name", withAuth, (req, res) => {
   });
 });
 
-router.post("/", withAuth, (req, res) => {
+router.post("/",  (req, res) => {
   Party.create({
     party_name: req.body.party_name,
   })
@@ -61,7 +61,7 @@ router.post("/", withAuth, (req, res) => {
     });
 });
 
-router.put("/:id", withAuth, (req, res) => {
+router.put("/:id",  (req, res) => {
   Party.update(
     {
       party_name: req.body.party_name,
@@ -85,7 +85,7 @@ router.put("/:id", withAuth, (req, res) => {
     });
 });
 
-router.delete("/:id", withAuth, (req, res) => {
+router.delete("/:id",  (req, res) => {
   Party.destroy({
     where: {
       id: req.params.id,
