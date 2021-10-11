@@ -1,7 +1,7 @@
 <main id="addcharacter-bg">
   <div class="container">
     <div id="form" class="col s12 z-depth-1 lighten-4 row">
-      <form class="col s12">
+      <form class="col s12" id="add-character">
         <div class="row">
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="character_name" type="text">
@@ -67,11 +67,15 @@
             <input class='validate orange-text text-accent-2' id="pp" type="text">
             <label for="pp">Passive Perception</label>
           </div>
+          <div class="input-field col s6">
+            <input class='validate orange-text text-accent-2' id="party_name" type="text" value="{{party_name}}">
+            <label for="party-name">Party Name</label>
+          </div>
         </div>
-        <button type='submit' name='submit' id='addparty' class='col s12 btn btn-large waves-effect orange'>
-          <a href="/party">Submit</a>
-        </button>
+        <button type='submit' name='submit' id='addcharacter' class='col s12 btn btn-large waves-effect orange'>Submit</button>
       </form>
     </div>
   </div>
 </main>
+
+<script src="/javascript/add-character.js"></script>
