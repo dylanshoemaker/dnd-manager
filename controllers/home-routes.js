@@ -100,7 +100,9 @@ router.get("/addcharacter", (req, res) => {
 });
 
 router.get("/addparty", (req, res) => {
-  res.render("addparty");
+  res.render("addparty", {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 router.get("/", (req, res) => {
