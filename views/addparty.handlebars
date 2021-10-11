@@ -4,17 +4,19 @@
   </div>
 
   <div id="add-party-form" class="col s12 z-depth-1 lighten-4 row">
-    <form class="col s12">
+    <form class="col s12" id="add-party">
       <div class="row">
         <div class="input-field col s12">
-          <input id="party-name" type="text" class='validate orange-text text-accent-2'>
-          <label for="party-name">Party Name</label>
+          <input id="party_name" type="text" class='validate orange-text text-accent-2'>
+          <label for="party_name">Party Name</label>
         </div>
       </div>
-      <button type='submit' name='submit' id='addparty' class='col s12 btn btn-large waves-effect orange'>
-        <a href="/party">Submit</a>
+      <button type='submit' name='submit' id='party_name' class='col s12 btn btn-large waves-effect orange'>
+        Submit
       </button>
     </form>
   </div>
 
 </main>
+
+<script src="/javascript/add-party.js"></script>

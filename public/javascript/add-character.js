@@ -1,5 +1,3 @@
-
-console.log('add character javascript');
 async function submitFormHandler(event) {
     event.preventDefault();
 
