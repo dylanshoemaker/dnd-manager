@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Party, User, Player, Enemy } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.get("/", withAuth, (req, res) => {
+router.get("/",  withAuth, (req, res) => {
   console.log("=======================");
   Party.findAll({
     attributes: ["party_name"],
@@ -19,7 +19,7 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-router.get("/:party_name", withAuth, (req, res) => {
+router.get("/:party_name",  withAuth,  (req, res) => {
   console.log("=====================");
   Party.findOne({
     where: {
@@ -43,6 +43,15 @@ router.get("/:party_name", withAuth, (req, res) => {
     //   dbPlayerData: dbPlayerData,
     //   loggedIn: req.session.loggedIn,
     // });
+
+
+    // res.render("player", {
+    //   playerData: dbplayerStatArr,
+    //   loggedIn: req.session.loggedIn,
+    //   playerPage: req.session.playerPage,
+    // });
+
+    
   })
   .catch((err) => {
     console.log(err);
@@ -50,18 +59,7 @@ router.get("/:party_name", withAuth, (req, res) => {
   });
 });
 
-router.post("/", withAuth, (req, res) => {
-  Party.create({
-    party_name: req.body.party_name,
-  })
-    .then((dbPartyData) => res.json(dbPartyData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
-router.put("/:id", withAuth, (req, res) => {
+router.put("/:id",  withAuth,  (req, res) => {
   Party.update(
     {
       party_name: req.body.party_name,
@@ -85,7 +83,7 @@ router.put("/:id", withAuth, (req, res) => {
     });
 });
 
-router.delete("/:id", withAuth, (req, res) => {
+router.delete("/:id",  withAuth,  (req, res) => {
   Party.destroy({
     where: {
       id: req.params.id,
@@ -103,5 +101,6 @@ router.delete("/:id", withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 module.exports = router;

@@ -52,6 +52,7 @@ router.get("/party/:party_name", (req, res) => {
     res.render("player", {
       dbPlayerData: dbPlayerData,
       loggedIn: req.session.loggedIn,
+      party_name: req.params.party_name
     });
   })
   .catch((err) => {
@@ -95,12 +96,17 @@ router.get("/createaccount", (req, res) => {
   res.render("createaccount");
 });
 
-router.get("/addcharacter", (req, res) => {
-  res.render("addcharacter");
+router.get("/addcharacter/:party_name", (req, res) => {
+  res.render("addcharacter", {
+    loggedIn: req.session.loggedIn,
+    party_name: req.params.party_name
+  });
 });
 
 router.get("/addparty", (req, res) => {
-  res.render("addparty");
+  res.render("addparty", {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 router.get("/", (req, res) => {

@@ -1,77 +1,81 @@
 <main id="addcharacter-bg">
   <div class="container">
     <div id="form" class="col s12 z-depth-1 lighten-4 row">
-      <form class="col s12">
+      <form class="col s12" id="add-character">
         <div class="row">
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="character_name" type="text">
-            <label for="email">Character Name</label>
+            <label for="character_name">Character Name</label>
           </div>
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="player_race" type="text">
-            <label for="email">Race</label>
+            <label for="player_race">Race</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="player_class" type="text">
-            <label for="email">Class</label>
+            <label for="player_class">Class</label>
           </div>
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="level" type="text">
-            <label for="email">Level</label>
+            <label for="level">Level</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="armor_class" type="text">
-            <label for="email">Armor Class</label>
+            <label for="armor_class">Armor Class</label>
           </div>
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="health" type="text">
-            <label for="email">Health</label>
+            <label for="health">Health</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="strength" type="text">
-            <label for="email">Strength</label>
+            <label for="strength">Strength</label>
           </div>
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="dexterity" type="text">
-            <label for="email">Dexterity</label>
+            <label for="dexterity">Dexterity</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="constitution" type="text">
-            <label for="email">Constitution</label>
+            <label for="constitution">Constitution</label>
           </div>
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="wisdom" type="text">
-            <label for="email">Wisdom</label>
+            <label for="wisdom">Wisdom</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="intelligence" type="text">
-            <label for="email">Intelligence</label>
+            <label for="intelligence">Intelligence</label>
           </div>
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="charisma" type="text">
-            <label for="email">Charisma</label>
+            <label for="charisma">Charisma</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
             <input class='validate orange-text text-accent-2' id="pp" type="text">
-            <label for="email">Passive Perception</label>
+            <label for="pp">Passive Perception</label>
+          </div>
+          <div class="input-field col s6">
+            <input class='validate orange-text text-accent-2' id="party_name" type="text" value="{{party_name}}">
+            <label for="party-name">Party Name</label>
           </div>
         </div>
-        <button type='submit' name='submit' id='addparty' class='col s12 btn btn-large waves-effect orange'>
-          <a href="/party">Submit</a>
-        </button>
+        <button type='submit' name='submit' id='addcharacter' class='col s12 btn btn-large waves-effect orange'>Submit</button>
       </form>
     </div>
   </div>
 </main>
+
+<script src="/javascript/add-character.js"></script>
