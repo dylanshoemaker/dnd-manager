@@ -7,10 +7,10 @@ router.get("/",  withAuth, (req, res) => {
   Party.findAll({
     attributes: ["party_name"],
     // order: [['created_at', 'DESC']],
-    // include: {
-    //     model: User,
-    //     attributes: ['id']
-    // }
+    include: {
+        model: User,
+        attributes: ['id']
+    }
   })
     .then((dbPartyData) => res.json(dbPartyData))
     .catch((err) => {

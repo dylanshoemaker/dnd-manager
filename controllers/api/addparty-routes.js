@@ -1,6 +1,6 @@
 
 const router = require('express').Router();
-const { Party, User } = require('../../models');
+const { Party} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post("/",  withAuth,  (req, res) => {

@@ -10,7 +10,7 @@ const addPartyRoutes = require('./addparty-routes.js')
 router.use('/users', userRoutes);
 router.use('/party', partyRoutes);
 router.use('/player', playerRoutes);
-router.use('/addparty', addPartyRoutes);
+router.use('/party', addPartyRoutes);
 router.use('/enemy', enemyRoutes);
 
 module.exports = router;
