@@ -7,10 +7,10 @@ router.get("/",  withAuth, (req, res) => {
   Party.findAll({
     attributes: ["party_name"],
     // order: [['created_at', 'DESC']],
-    // include: {
-    //     model: User,
-    //     attributes: ['id']
-    // }
+    include: {
+        model: User,
+        attributes: ['id']
+    }
   })
     .then((dbPartyData) => res.json(dbPartyData))
     .catch((err) => {
@@ -58,6 +58,20 @@ router.get("/:party_name",  withAuth,  (req, res) => {
     res.status(500).json(err);
   });
 });
+
+router.post("/",  withAuth,  (req, res) => {
+  Party.create({
+    party_name: req.body.party_name,
+    user_id: req.session.user_id
+  })
+    .then((dbPartyData) => res.json(dbPartyData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+
 
 router.put("/:id",  withAuth,  (req, res) => {
   Party.update(
