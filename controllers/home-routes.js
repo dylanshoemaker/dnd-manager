@@ -55,13 +55,13 @@ router.get("/party/:party_name", (req, res) => {
           plain: true,
         })
       )
-      console.log(dbPlayerData);
+      // console.log(dbPlayerData);
       const dbEnemyData = dbPartyData.enemies.map((enemies) =>
         enemies.get({
           plain: true,
         })
       )
-      console.log(dbEnemyData);
+      // console.log(dbEnemyData);
       res.render("player", {
         dbPlayerData: dbPlayerData,
         dbEnemyData: dbEnemyData,
