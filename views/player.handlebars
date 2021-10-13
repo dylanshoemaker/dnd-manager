@@ -22,5 +22,19 @@
         {{/each}}
 
     </div>
+    <div class="container">
+        {{#each dbEnemyData}}
+        <div class="row">
+            {{> enemy-button}}
+        </div>
+        {{/each}}
+
+        {{#each dbEnemyData}}
+        <div class="row">
+            {{> enemyinfo}}
+        </div>
+        {{/each}}
+
+    </div>
 
 </main>
