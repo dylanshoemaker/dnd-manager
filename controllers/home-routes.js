@@ -61,7 +61,7 @@ router.get("/party/:party_name", (req, res) => {
           plain: true,
         })
       )
-      // console.log(dbEnemyData);
+      console.log(dbEnemyData);
       res.render("player", {
         dbPlayerData: dbPlayerData,
         dbEnemyData: dbEnemyData,
