@@ -8,19 +8,22 @@
         </button>
     </div>
     <br></br>
-    <div class="container">
-        {{#each dbPlayerData}}
-        <div class="row">
-            {{> character-button}}
+    <div class="container row">
+        <div class="container col s6 push-s2">
+            {{#each dbPlayerData}}
+            <div class="row">
+                {{> character-button}}
+                {{> playerinfo}}
+            </div>
+            {{/each}}
         </div>
-        {{/each}}
-
-        {{#each dbPlayerData}}
-        <div class="row">
-            {{> playerinfo}}
+        <div class="container col s6 push-s5">
+            {{#each dbEnemyData}}
+            <div class="row">
+                {{> enemy-button}}
+                {{> enemyinfo}}
+            </div>
+            {{/each}}
         </div>
-        {{/each}}
-
     </div>
-
 </main>
