@@ -1,5 +1,16 @@
 # dnd-manager
 
+
+## Table of Contents
+
+- [Description](#Description)
+- [Technologies](#Technologies)              
+- [Usage](#Usage)
+- [Screenshots](#Screenshots)
+- [Contributors](#Contributors)
+- [Link to application](#Link-to-application)
+- [Questions](#Questions)
+
 ## Description
 
 This is a website that allows Dungeon Masters to organize digital copies of all of their character sheets in each campaign that they’re managing.  Rather than trying to keep track of hard copies, they can have all of the relevant information they need all in one place.  DMs also have the capability of editing and reorganizing the character sheets as needed.
@@ -51,12 +62,3 @@ Please reach out through email
 Email: xtrent777x@gmail.com
 
 
-## Table of Contents
-
-* [Description](#description)
-* [Technologies](#technologies)              
-* [Use](#use)
-* [Screenshots](#screenshots)
-* [Contributors](#contributors)
-* [Link to application](#link)
-* [Questions](#questions)
