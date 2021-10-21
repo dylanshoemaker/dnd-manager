@@ -4,7 +4,7 @@
 ## Table of Contents
 
 - [Description](#Description)
-- [Technologies](#Technologies)              
+- [Technologies](#Technologies-Used)              
 - [Usage](#Usage)
 - [Screenshots](#Screenshots)
 - [Contributors](#Contributors)
@@ -15,7 +15,7 @@
 
 This is a website that allows Dungeon Masters to organize digital copies of all of their character sheets in each campaign that they’re managing.  Rather than trying to keep track of hard copies, they can have all of the relevant information they need all in one place.  DMs also have the capability of editing and reorganizing the character sheets as needed.
 
-## Technologies used
+## Technologies Used
 
 ![NodeJS](https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
@@ -25,11 +25,11 @@ This is a website that allows Dungeon Masters to organize digital copies of all 
 [![ExpressJS](https://github.com/MarioTerron/logo-images/blob/master/logos/expressjs.png)](http://expressjs.com///)
 
 
-## Use
+## Usage
 
 One stop shop for your DM to follow any party. Within party will have access to characters and be able to edit as needed.
 
-## ScreenShots
+## Screenshots
 ![Screen Shot 2021-09-21 at 8 07 56 PM](https://user-images.githubusercontent.com/84681402/134272627-85bf112c-0386-47e4-9f6d-e6fa16cb9e13.png)
 
 ![Screen Shot 2021-09-21 at 8 08 14 PM](https://user-images.githubusercontent.com/84681402/134272634-035d0637-5a4c-4ac6-8c94-5a9b529ac900.png)
@@ -52,7 +52,7 @@ https://github.com/johnrip89
 https://github.com/Stormblessed624
 
 
-## Link to application
+## Link to Application
 
 Heroku - https://dnd-character-sheet-manager.herokuapp.com/
 
